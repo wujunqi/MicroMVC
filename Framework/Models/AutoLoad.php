@@ -25,7 +25,7 @@ class AutoLoad {
      * @return boolean
      */
     public function loadClass($class_name) {
-        var_dump("wjq__", $class_name);die;
+        var_dump("wjq__", $class_name);
         $class_name = ltrim($class_name, '\\');
         if ($last_ns_pos = strrpos($class_name, '\\')) {
             $namespace = substr($class_name, 0, $last_ns_pos);
@@ -40,6 +40,7 @@ class AutoLoad {
                 $file_name = str_replace('\\', DIRECTORY_SEPARATOR, $namespace) . DIRECTORY_SEPARATOR;
             }
             $file_name .= str_replace('_', DIRECTORY_SEPARATOR, $class_name) . '.php';
+            var_dump($file_name);die;
             require_once ROOT_PATH . DIRECTORY_SEPARATOR . $file_name;
             return true;
         }
