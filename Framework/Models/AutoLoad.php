@@ -25,7 +25,6 @@ class AutoLoad {
      * @return boolean
      */
     public function loadClass($class_name) {
-        var_dump("wjq__", $class_name);die;
         $class_name = ltrim($class_name, '\\');
         if ($last_ns_pos = strrpos($class_name, '\\')) {
             $namespace = substr($class_name, 0, $last_ns_pos);
