@@ -24,6 +24,7 @@ class Application {
     public function __construct($app_name) {
         $this->_app_name = $app_name;
         //每次app实例单独加在AutoLoad，以便隔离不同module的底层加载
+        var_dump("wjq".$app_name);
         $this->_iniAutoLoad($app_name);
         //框架只加载一次
         if ( ! self::$_is_load_framework) {
