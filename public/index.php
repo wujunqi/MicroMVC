@@ -27,4 +27,4 @@ if ( ! empty($server_uri)) {
 }
 require FRAMEWORK_PATH . '/Models/Application.php';
 $app = new Framework\Models\Application($module);
-$app->bootstrap()->run();
+// $app->bootstrap()->run();
